@@ -1,13 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header/Header';
 import Section from './Section';
 
 const Layout = () => {
+  const { pathname } = useLocation();
+
   return (
     <Section>
       {/* HEADER */}
-      <Header />
+      {pathname !== '/' && <Header />}
       {/* OUTLET */}
       <Outlet />
     </Section>
