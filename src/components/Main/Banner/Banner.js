@@ -9,8 +9,9 @@ const BannerContainer = styled.header`
   height: 11.25rem;
   width: 100%;
   display: flex;
+  position: sticky;
+  top: 0;
 `;
-
 const Title = styled.div`
   flex-basis: 65%;
   color: #fff;
